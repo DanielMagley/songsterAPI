@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    /* left: 50%; */
+}
+
+h2 {
+    text-align: left;
+}
+
+h3 {
+    display: inline;
+    font-size: 10px;
+}
