@@ -18,8 +18,6 @@ const div = document.querySelector('.songName')
 
 //Event Listeners
 searchForm.addEventListener('submit', fetchSongResults);
-nextBtn.addEventListener('click', nextPage);
-previousBtn.addEventListener('click', previousPage);
 
 //FULL Assembled URL
 function fetchSongResults(e) {
@@ -45,8 +43,7 @@ function displayResults(json) {
 
         let songList = json.forEach(s => {
             console.log(s);
-                                                    // let songTitle = s.title;
-                                                    //     console.log(songTitle);
+  
         let artists = s.artist.name;
             console.log(artists);
 
@@ -56,65 +53,24 @@ function displayResults(json) {
         let songLink = 'http://www.songsterr.com/a/wa/song?id=' + songId
             console.log(songLink);
 
-                                                    // if(s.length === 10) {
-                                                    //     nav.style.display = 'block';
-                                                    // } else if (s.length < 10) {
-                                                    //     nextBtn.style.visibility = 'hidden';
-                                                    // } else {
-                                                    //     return;
-                                                    // }
-    
         let title = document.createElement('h2');
-        let artist = document.createElement('h3');
+        let artist = document.createElement('p');
         let clearfix = document.createElement('div');
         let link = document.createElement('a');
+        let img = document.createElement('img');
         link.href = songLink
-        img.innerHTML =
-        
-        title.innerText = s.title
-        artist.innerText = s.artist.name
-                                                    // let img = document.createElement('img');
-        
-                                                    // let clearfix = document.createElement('div');
+        img.setAttribute('href', songLink);
+        img.src = "https://image.flaticon.com/icons/svg/527/527123.svg";
 
-                                                    // let current = songList[i];
-                                                    // console.log("current: ", current);
-                
+        title.innerText = s.title
+        artist.innerText = ' by   ' + s.artist.name
+
+        clearfix.setAttribute('class', 'clearfix');
+        
         section.appendChild(clearfix);
-        section.appendChild(title);
-        section.appendChild(artist);
-        section.appendChild(link);
-        section.appendChild(clearfix);
-                    // article.appendChild(img);
-                    // article.appendChild(artist);
-                    // article.appendChild(clearfix);
-                    // section.appendChild(song);
-                
-            
+        clearfix.appendChild(title);
+        title.appendChild(artist);
+        title.appendChild(link);
+        link.appendChild(img);
         })
     }
-
-
-
-
-
-
-
-
-function nextPage() {
-    pageNumber++;
-    fetchResults()
-    // console.log("clicked")
-    // console.log("Page Number:", pageNumber);
-}
-
-function previousPage() {
-    if(pageNumber > 0) {
-        pageNumber--;
-    } else {
-        return;
-    }
-    fetchResults(e);
-    // console.log("Page:", pageNumber)
-// console.log('clicked clicked')
-}

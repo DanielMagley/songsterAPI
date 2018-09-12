@@ -1,9 +1,23 @@
+body {
+    background-image: url("https://images.pexels.com/photos/363905/pexels-photo-363905.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-size: 1700px 1200px; 
+    background-position-x: -100px;
+    background-position-y: -400px;
+    /* background-repeat: no-repeat; */
+}
+
+.wrapper {
+    align-content: center;
+}
+
 h1 {
     text-align: center;
+    
 }
 
 p {
     text-align: center;
+    
 }
 
 nav {
@@ -11,11 +25,75 @@ nav {
     /* left: 50%; */
 }
 
-h2 {
-    text-align: left;
+#search {
+    border-radius: 5em;
+    width: 200px;
+    height: 20px;
+    font-display: center;
+    font-size: 12px;
 }
 
-h3 {
-    display: inline;
-    font-size: 10px;
+.submit {
+    border-radius: 50em;
+    display: inline-block;
+    border: none;
+    font-size: 12px;
+    background-color: black;
+    color: #D9D6CB
 }
+
+h2 {
+    text-align: left;
+    font-style: bold;
+    font-family: 'Raleway', sans-serif;
+    padding: none;
+    padding-left: 5px;
+    padding-right: 45px;
+}
+
+.results {
+    margin-top: -150px;
+}
+
+#box {
+    /* background-color: brown; */
+    width: 500px;
+    height: 450px;
+    float: right;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-left: 10px;
+    overflow: scroll;
+}
+
+#box p {
+    text-align: left;
+    font-family: 'Exo', sans-serif;
+    font-size: 10px;
+    padding-left: 5px;
+    margin-top: -3px;
+}
+
+#box img {
+    margin-top: -48px;
+    padding-right: -35px;
+    height: 40px;
+    width:  45px;
+    float: right;
+}
+
+#box .clearfix {
+    border-bottom: 1px solid black;
+    background-color: #D9D6CB;
+    padding-top: .5px;
+}
+
+#box .clearfix:hover {
+    background-color: rgb(161, 224, 198);
+}
+
+
+
+/* background-imgaes
+https://images.unsplash.com/photo-1527362127499-f590dfc9af95?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=56f310625c759d722d2818557b79fbce&auto=format&fit=crop&w=1628&q=80
+https://images.unsplash.com/photo-1530801588537-594a77d18206?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bb6a7de0ef7a27723b469f23f6c937c2&auto=format&fit=crop&w=1950&q=80 */
